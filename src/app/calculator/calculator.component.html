@@ -1,0 +1,40 @@
+<p>Calculator</p>
+
+<form>
+  <input
+    type="text"
+    [(ngModel)]="inp"
+    [ngModelOptions]="{ standalone: true }"
+    placeholder="e.g. 12+34"
+  />
+
+  <table>
+    <tr>
+      <td><button (click)="takeInput(1)">1</button></td>
+      <td><button (click)="takeInput(2)">2</button></td>
+      <td><button (click)="takeInput(3)">3</button></td>
+      <td><button (click)="takeInput('+')">+</button></td>
+    </tr>
+
+    <tr>
+      <td><button (click)="takeInput(4)">4</button></td>
+      <td><button (click)="takeInput(5)">5</button></td>
+      <td><button (click)="takeInput(6)">6</button></td>
+      <td><button (click)="takeInput('-')">-</button></td>
+    </tr>
+
+    <tr>
+      <td><button (click)="takeInput(7)">7</button></td>
+      <td><button (click)="takeInput(8)">8</button></td>
+      <td><button (click)="takeInput(9)">9</button></td>
+      <td><button (click)="takeInput('*')">*</button></td>
+    </tr>
+
+    <tr>
+      <td><button (click)="allClear()" style="background-color: red">C</button></td>
+      <td><button (click)="takeInput(0)">0</button></td>
+      <td><button (click)="equalTo()" style="background-color: green">=</button></td>
+      <td><button (click)="takeInput('/')">/</button></td>
+    </tr>
+  </table>
+</form>
